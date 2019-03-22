@@ -12,9 +12,9 @@
   <div class="row">
     <h3>Capeonato Brasileiro - Série A</h3>
   </div>
-  <input type="text" :value="gols" @input="pegarValor($event.data)">
+  <input type="text" :id="gols" v-model="gols">
   <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
-
+  {{gols}}
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -40,3 +40,4 @@
 
 <!-- Data binding Programação --- HTML -->
 <!-- One way data binding -->
+<!-- Two way data binding -v-model -->
