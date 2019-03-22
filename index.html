@@ -12,7 +12,8 @@
   <div class="row">
     <h3>Capeonato Brasileiro - Série A</h3>
   </div>
-  <input type="text" :value="gols" >
+  <input type="text" :value="gols" @input="pegarValor($event.data)">
+  <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
 
 </div>
 
@@ -23,6 +24,14 @@
     el: "#app",
     data: {
       gols: '3'
+    },
+    methods: {
+      showAlert(){
+        alert("Fim de jogo")
+      },
+      pegarValor(event){
+        console.log(event)
+      }
     }
   })
 </script>
