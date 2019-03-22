@@ -12,7 +12,9 @@
     {{variavel}}<br/>
     <input type="text" v-model="n1" placeholder="n1">
     <input type="text" v-model="n2" placeholder="n2">
-    {{n1*n2}}
+    <p>
+        {{parseInt(n1)+parseInt(n2)}}
+    </p>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -22,8 +24,8 @@
         el: "#app",
         data: {
             variavel: '',
-            n1: '',
-            n2: ''
+            n1: 0,
+            n2: 0
         }
     })
 </script>
