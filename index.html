@@ -12,6 +12,10 @@
   <div class="row">
     <h3>Capeonato Brasileiro - Série A</h3>
   </div>
+  <div>
+    {{time.nome}}
+    <img :src="time.escudo" alt="">
+  </div>
   <input type="text" :id="gols" v-model="gols">
   <button class="btn btn-primary" @click="showAlert">Fim de Jogo</button>
   {{gols}}
@@ -20,10 +24,19 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 
 <script>
+
+  class Time{
+    constructor(nome, escudo){
+      this.nome = nome;
+      this.escudo = escudo;
+    }
+  }
+
   new Vue({
     el: "#app",
     data: {
-      gols: '3'
+      gols: '3',
+      time: new Time('América MG', 'assets/america_mg_60x60.png')
     },
     methods: {
       showAlert(){
